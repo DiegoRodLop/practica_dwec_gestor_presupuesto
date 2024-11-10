@@ -30,6 +30,26 @@ function mostrarPresupuesto() {
     console.log(`Tu presupuesto es de ${presupuesto} €`);
 }
 
+function listarGastos(){
+    //todo
+}
+
+function anyadirGasto(){
+    //todo
+}
+
+function borrarGasto(){
+    //todo
+}
+
+function calcularTotalGastos(){
+    //todo
+}
+
+function calcularBalance(){
+    //todo
+}
+
 function CrearGasto(descripcion, valor) {
     // TODO
 
@@ -61,6 +81,11 @@ function CrearGasto(descripcion, valor) {
 // Las funciones y objetos deben tener los nombres que se indican en el enunciado
 // Si al obtener el código de una práctica se genera un conflicto, por favor incluye todo el código que aparece aquí debajo
 export   {
+    listarGastos,
+    anyadirGasto,
+    borrarGasto,
+    calcularTotalGastos,
+    calcularBalance,
     mostrarPresupuesto,
     actualizarPresupuesto,
     CrearGasto
