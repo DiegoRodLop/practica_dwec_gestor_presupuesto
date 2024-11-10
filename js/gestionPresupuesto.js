@@ -33,9 +33,25 @@ function CrearGasto(descripcion, valor) {
     this.descripcion = descripcion;
     this.valor = (typeof valor == "number" && valor >= 0) ? valor : 0;
 
+    this.mostrarGasto = function() {
+        return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;
+    };
+
+    this.actualizarDescripcion = function(nuevaDescripcion) {
+        this.descripcion = nuevaDescripcion;
+    };
+
+    this.actualizarValor = function(nuevoValor) {
+        if (typeof nuevoValor === "number" && nuevoValor >= 0) {
+            this.valor = nuevoValor;
+        } else {
+            console.error("Error: El valor introducido no es válido o es negativo.");
+        }
+    };
+
 }
 
-var gasto = new CrearGasto();
+    let gasto = new CrearGasto("Algodon", "20");
 
 
 // NO MODIFICAR A PARTIR DE AQUÍ: exportación de funciones y objetos creados para poder ejecutar los tests.
