@@ -2,7 +2,7 @@
 
 // TODO: Variable global
 
-var gasto;
+var gastos;
 var idgasto;
 
 var presupuesto = 0.0;
@@ -27,34 +27,28 @@ function actualizarPresupuesto() {
 function mostrarPresupuesto() {
     // TODO
 
+    let texto = `Tu presupuesto es de ${presupuesto} €`;
+
+    return texto;
+
     console.log(`Tu presupuesto es de ${presupuesto} €`);
 }
 
-function listarGastos(){
-    //todo
-}
-
-function anyadirGasto(){
-    //todo
-}
-
-function borrarGasto(){
-    //todo
-}
-
-function calcularTotalGastos(){
-    //todo
-}
-
-function calcularBalance(){
-    //todo
-}
-
-function CrearGasto(descripcion, valor) {
+function CrearGasto(descripcion, valor, fecha = [], etiqueta = []) {
     // TODO
 
     this.descripcion = descripcion;
     this.valor = (typeof valor == "number" && valor >= 0) ? valor : 0;
+    this.etiqueta = Array.isArray(etiqueta) ? etiqueta : [];
+
+
+    //Consultado en chatgpt
+    let parsedFecha = Date.parse(fecha);
+    if (parsedFecha) {
+        this.fecha = new Date(parsedFecha);
+    } else {
+        this.fecha = new Date();
+    }
 
     this.mostrarGasto = function() {
         return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;
@@ -72,9 +66,35 @@ function CrearGasto(descripcion, valor) {
         }
     };
 
-}
+    function listarGastos(){
+        //todo
+    
+        console.log(gastos);
 
-    let gasto = new CrearGasto("Algodon", "20");
+        return gastos;
+    }
+    
+    function anyadirGasto(){
+        //todo
+
+        id = id + idgasto;
+
+        return id;
+    }
+    
+    function borrarGasto(){
+        //todo
+    }
+    
+    function calcularTotalGastos(){
+        //todo
+    }
+    
+    function calcularBalance(){
+        //todo
+    }
+
+}
 
 
 // NO MODIFICAR A PARTIR DE AQUÍ: exportación de funciones y objetos creados para poder ejecutar los tests.
