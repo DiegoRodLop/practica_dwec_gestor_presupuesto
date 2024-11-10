@@ -2,7 +2,10 @@
 
 // TODO: Variable global
 
-let presupuesto = 0.0;
+var gasto;
+var idgasto;
+
+var presupuesto = 0.0;
 
 function actualizarPresupuesto() {
     // TODO
