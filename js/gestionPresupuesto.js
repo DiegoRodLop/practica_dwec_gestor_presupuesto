@@ -52,11 +52,11 @@ function CrearGasto(descripcion, valor, fecha = [], etiqueta = []) {
 
     this.mostrarGasto = function() {
         return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;
-    };
+    }
 
     this.actualizarDescripcion = function(nuevaDescripcion) {
         this.descripcion = nuevaDescripcion;
-    };
+    }
 
     this.actualizarValor = function(nuevoValor) {
         if (typeof nuevoValor === "number" && nuevoValor >= 0) {
@@ -64,36 +64,35 @@ function CrearGasto(descripcion, valor, fecha = [], etiqueta = []) {
         } else {
             console.error("Error: El valor introducido no es válido o es negativo.");
         }
-    };
-
-    function listarGastos(){
-        //todo
-    
-        console.log(gastos);
-
-        return gastos;
     }
-    
-    function anyadirGasto(){
-        //todo
+}
 
-        id = id + idgasto;
+function listarGastos() {
+    //todo
 
-        return id;
-    }
-    
-    function borrarGasto(){
-        //todo
-    }
-    
-    function calcularTotalGastos(){
-        //todo
-    }
-    
-    function calcularBalance(){
-        //todo
-    }
+    console.log(gastos);
 
+    return gastos;
+}
+
+function anyadirGasto() {
+    //todo
+
+    id = id + idgasto;
+
+    return id;
+}
+
+function borrarGasto() {
+    //todo
+}
+
+function calcularTotalGastos() {
+    //todo
+}
+
+function calcularBalance() {
+    //todo
 }
 
 
