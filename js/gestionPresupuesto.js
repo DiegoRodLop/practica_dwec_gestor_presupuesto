@@ -67,6 +67,15 @@ function CrearGasto(descripcion, valor, fecha = [], etiqueta = []) {
     }
 }
 
+let gasto = {
+    descripcion:"",
+    valor:"",
+    fecha:"",
+    
+
+
+}
+
 function listarGastos() {
     //todo
 
