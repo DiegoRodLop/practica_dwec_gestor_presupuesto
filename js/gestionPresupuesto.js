@@ -109,6 +109,7 @@ function CrearGasto(descripcion, valor, fecha = [], etiqueta = [], id) {
         for(valor in borrarEtiqueta){
             //si se encuentra el valor le indicamos que lo borre del listado de etiquetas
             if(valor == borrarEtiqueta){
+                //Eliminamos de la lista de etiquetas la etiqueta introducida
                 etiqueta.removeAt(valor);
             }
         }
