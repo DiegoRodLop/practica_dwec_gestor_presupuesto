@@ -13,8 +13,6 @@ function actualizarPresupuesto() {
     if(typeof nuevopresupuesto == "number" && nuevopresupuesto >= 0)
     {
         presupuesto = nuevopresupuesto;
-
-        console.log(presupuesto);
         
     }
     else
@@ -22,6 +20,7 @@ function actualizarPresupuesto() {
         alert("El valor introducido no es valido");
     }
 
+    return presupuesto
 }
 
 function mostrarPresupuesto() {
@@ -86,6 +85,32 @@ function CrearGasto(descripcion, valor, fecha = [], etiqueta = [], id) {
         if (!isNaN(timestamp)) {
             // Si la fecha es válida, se actualiza la propiedad fecha
             objeto.fecha = new Date(timestamp);
+        }
+    }
+
+    this.añadirEtiquetas(etiqueta, nueva_etiqueta)
+    {
+        etiquetasExistentes = set(etiqueta);
+
+        for (valor in nueva_etiqueta){
+            if (valor != etiquetasExistentes){
+                etiqueta.add(valor);
+                etiquetasExistentes.add(valor);
+            }
+        }
+
+    }
+
+    this.borrarEtiquetas(etiqueta, borrarEtiqueta)
+    {
+        etiquetasExistentes = set(etiqueta)
+
+        //Buscamos el valor dentro del parametro borrar etiquete
+        for(valor in borrarEtiqueta){
+            //si se encuentra el valor le indicamos que lo borre del listado de etiquetas
+            if(valor == borrarEtiqueta){
+                etiqueta.removeAt(valor);
+            }
         }
     }
 }
